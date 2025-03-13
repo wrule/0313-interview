@@ -6,7 +6,7 @@ export class CryptoController {
   constructor(private readonly cryptoService: CryptoService) {}
 
   @Get('/api/agent/crypto')
-  getHello(): string {
-    return this.cryptoService.getHello();
+  getNiceName() {
+    return this.cryptoService.getText();
   }
 }
