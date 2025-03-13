@@ -5,7 +5,7 @@ import { CryptoService } from './crypto.service';
 export class CryptoController {
   constructor(private readonly cryptoService: CryptoService) {}
 
-  @Get()
+  @Get('/api/agent/crypto')
   getHello(): string {
     return this.cryptoService.getHello();
   }
