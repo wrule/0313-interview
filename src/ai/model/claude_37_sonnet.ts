@@ -6,6 +6,6 @@ const provider = createOpenAICompatible({
   baseURL: 'https://openrouter.ai/api/v1',
 });
 
-const model = provider('anthropic/claude-3.7-sonnet');
+const claude_37_sonnet = provider('anthropic/claude-3.7-sonnet');
 
-export default model;
+export default claude_37_sonnet;
