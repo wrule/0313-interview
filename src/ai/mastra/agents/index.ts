@@ -2,8 +2,8 @@ import { Agent } from '@mastra/core/agent';
 import { weatherTool } from '../tools';
 import claude_37_sonnet from 'src/ai/model/claude_37_sonnet';
 
-export const weatherAgent = new Agent({
-  name: 'Weather Agent',
+export const CryptoAgent = new Agent({
+  name: 'Crypto Agent',
   instructions: `
       You are a helpful weather assistant that provides accurate weather information.
 
