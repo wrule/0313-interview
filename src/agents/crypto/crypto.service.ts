@@ -1,14 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { generateText } from 'ai';
-import claude_37_sonnet from 'src/ai/model/claude_37_sonnet';
+import { mastra } from 'src/ai/mastra';
 
 @Injectable()
 export class CryptoService {
   async getText() {
-    const { text } = await generateText({
-      model: claude_37_sonnet,
-      prompt: 'Invent a new holiday and describe its traditions.',
-    });
-    return text;
+    const agent = mastra.getAgent('weatherAgent');
+    const response = await agent.generate(`What's the weather like in Tokyo?`);
+    return response.text;
   }
 }
